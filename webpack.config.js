@@ -1,15 +1,12 @@
-// Generated using webpack-cli https://github.com/webpack/webpack-cli
-
 const path = require("path");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { webpack } = require("webpack");
 
 process.env.NOD_ENV = process.env.NODE_ENV || "development";
 
 if (process.env.NODE_ENV === "test") {
   require("dotenv").config({ path: ".env.test" });
-} else if (process.env.NODE_ENV === "development") {
+} else {
   require("dotenv").config({ path: ".env.development" });
 }
 
